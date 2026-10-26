@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<section class="hero-copy">
+  {% assign glyphs = "{ } ; </> => && || != ++ :: [] () λ # $ */ 0x 01 fn <> === ?. ~ % |> -> // @ ** ! ... <=" | split: " " %}
+  <div class="hero-lights" aria-hidden="true">{% for i in (0..47) %}{% assign g = i | times: 7 | modulo: glyphs.size %}<span style="--x:{{ i | times: 37 | plus: 11 | modulo: 97 }}%;--y:{{ i | times: 53 | plus: 7 | modulo: 89 }}%;--s:{{ i | times: 13 | modulo: 10 | times: 0.14 | plus: 0.8 }}rem;--r:{{ i | times: 29 | modulo: 31 | minus: 15 }}deg;--d:-{{ i | times: 7 | modulo: 23 | times: 0.31 }}s;--t:{{ i | times: 5 | modulo: 4 | plus: 3 }}s">{{ glyphs[g] | escape }}</span>{% endfor %}</div>
+  <p class="eyebrow"><span class="eyebrow-dot"></span> A notebook for curious developers</p>
+  <h1>Ideas worth <em>thinking</em>.</h1>
+  <p class="hero-description">Practical notes on software, programming, tools, and the little details that make building things fun.</p>
+</section>
+<section class="article-section" aria-labelledby="latest-heading">
+  <div class="section-heading"><h2 id="latest-heading">Latest articles</h2><span class="section-rule"></span><span class="post-count">{{ site.posts.size }} posts</span></div>
+  {% if site.posts.size > 0 %}
+    <div class="post-list">
+      {% for post in site.posts %}
+        <article class="post-card">
+          <div class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.categories.size > 0 %}<span class="meta-divider">/</span><span class="category">{{ post.categories | first }}</span>{% endif %}{% if post.reading_time %}<span class="read-time">{{ post.reading_time }} min read</span>{% endif %}</div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+          {% if post.description %}<p>{{ post.description | escape }}</p>{% else %}<p>{{ post.excerpt | strip_html | normalize_whitespace | truncate: 190 }}</p>{% endif %}
+          <a class="read-link" href="{{ post.url | relative_url }}">Read article <span aria-hidden="true">↗</span></a>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state"><span class="empty-icon">&lt;/&gt;</span><h3>Your next idea starts here.</h3><p>Add Markdown files to <code>_posts</code> to publish your first article.</p></div>
+  {% endif %}
+</section>

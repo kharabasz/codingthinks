@@ -1,18 +1,24 @@
-title: codingthinks
-description: Thoughts on code, software and building things.
+title: Coding Thinks
+tagline: Notes, ideas, and practical guides for curious developers.
+description: Notes, ideas, and practical guides for curious developers.
 url: "https://codingthinks.com"
 baseurl: ""
-author: Kacper Harabasz
-github_username: kharabasz
+lang: en
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+timezone: Europe/Warsaw
 
-theme: minima
+author:
+  name: Kacper Harabasz
+  bio: Thoughts on code, tools, and the craft of building software.
+  github: "https://github.com/kharabasz"
+  linkedin: ""
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-
-permalink: /:year/:month/:day/:title/
-markdown: kramdown
 
 exclude:
   - README.md

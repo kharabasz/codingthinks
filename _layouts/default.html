@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#103746">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+        <img class="brand-image" src="{{ '/assets/images/coding-thinks-logo.png' | relative_url }}" alt="Coding Thinks">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}">Articles</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="page-wrap">{{ content }}</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="{{ '/' | relative_url }}">coding <span>thinks</span></a>
+      <p>Built with curiosity, coffee, and <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+      <p class="copyright">© {{ 'now' | date: '%Y' }} {{ site.title }} · <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></p>
+    </div>
+  </footer>
+  <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
+</body>
+</html>

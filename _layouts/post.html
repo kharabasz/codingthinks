@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="article">
+  <header class="article-header">
+    <a class="back-link" href="{{ '/' | relative_url }}">← All articles</a>
+    <div class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.categories.size > 0 %}<span class="meta-divider">/</span><span class="category">{{ page.categories | first }}</span>{% endif %}</div>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="article-deck">{{ page.description | escape }}</p>{% endif %}
+    {% if page.tags.size > 0 %}<div class="tag-list">{% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</div>{% endif %}
+  </header>
+  <div class="article-layout">
+    <div class="article-content">{{ content }}</div>
+    <aside class="article-aside"><div class="aside-card"><span class="aside-mark">&lt;/&gt;</span><p class="aside-title">Enjoying the read?</p><p>More notes for people who like to understand how things work.</p><a href="{{ '/' | relative_url }}">Explore all articles →</a></div></aside>
+  </div>
+  <nav class="article-bottom"><a href="{{ '/' | relative_url }}">← Back to all articles</a><a href="{{ '/feed.xml' | relative_url }}">Follow via RSS ↗</a></nav>
+</article>
