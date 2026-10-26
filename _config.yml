@@ -1,0 +1,21 @@
+title: codingthinks
+description: Thoughts on code, software and building things.
+url: "https://codingthinks.com"
+baseurl: ""
+author: Kacper Harabasz
+github_username: kharabasz
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
