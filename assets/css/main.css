@@ -9,3 +9,4 @@
 @keyframes glyph{0%,25%,75%,100%{opacity:.07}50%{opacity:.75}}@keyframes glyph-dark{0%,25%,75%,100%{opacity:.07}50%{opacity:1}}:root[data-theme="dark"] .hero-lights span{animation-name:glyph-dark}
 @media(max-width:520px){.hero-lights span:nth-child(2n){display:none}}
 @media(prefers-reduced-motion:reduce){.hero-lights span{animation:none}}
+.article-hero{margin:0}.article-hero img{display:block;width:100%;height:auto;border-radius:10px;box-shadow:var(--shadow)}.has-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:44px;align-items:end;margin-bottom:46px}.has-hero .article-header{margin:0}.has-hero .article-header h1{font-size:clamp(2.4rem,5vw,3.6rem)}.article-content p>img{display:block;margin:2em 0}@media(max-width:760px){.has-hero{grid-template-columns:1fr;gap:26px;margin-bottom:34px}}
