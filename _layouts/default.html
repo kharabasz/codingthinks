@@ -7,18 +7,10 @@
   {% seo %}
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
-  {% if site.google_analytics and jekyll.environment == 'production' %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{ site.google_analytics }}');
-  </script>
-  {% endif %}
   <link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
 <body>
+  {% if site.google_analytics and jekyll.environment == 'production' %}{% assign analytics = true %}{% endif %}
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
@@ -38,9 +30,19 @@
     <div class="footer-inner">
       <a class="footer-brand" href="{{ '/' | relative_url }}">coding <span>thinks</span></a>
       <p>Built with curiosity, coffee, and <a href="https://jekyllrb.com/">Jekyll</a>.</p>
-      <p class="copyright">© {{ 'now' | date: '%Y' }} {{ site.title }} · <a href="{{ '/license/' | relative_url }}">CC BY 4.0</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></p>
+      <p class="copyright">© {{ 'now' | date: '%Y' }} {{ site.title }} · <a href="{{ '/license/' | relative_url }}">CC BY 4.0</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a>{% if analytics %} · <button class="consent-open" type="button">Cookies</button>{% endif %}</p>
     </div>
   </footer>
+  {% if analytics %}
+  <div class="consent-banner" role="region" aria-label="Cookie consent" data-ga-id="{{ site.google_analytics }}" hidden>
+    <p>This site uses Google Analytics cookies to count visits. Is that OK with you?</p>
+    <div class="consent-actions">
+      <button class="consent-accept" type="button">Accept</button>
+      <button class="consent-decline" type="button">Decline</button>
+    </div>
+  </div>
+  <script src="{{ '/assets/js/consent.js' | relative_url }}" defer></script>
+  {% endif %}
   <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
 </body>
 </html>
