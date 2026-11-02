@@ -10,4 +10,6 @@ permalink: /about/
 
 I write here about building software and engineering organisations. I've built platforms, applications and development teams, and the ideas I share come from that experience.
 
+You're free to reuse anything I write here, as long as you credit me. The [license]({{ '/license/' | relative_url }}) page explains how.
+
 You can find me on [LinkedIn]({{ site.author.linkedin }}) and [GitHub]({{ site.author.github }}).
