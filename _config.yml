@@ -1,6 +1,6 @@
 title: Coding Thinks
-tagline: Notes, ideas, and practical guides for curious developers.
-description: Notes, ideas, and practical guides for curious developers.
+tagline: Ideas on building software and engineering organisations.
+description: Ideas on building software and engineering organisations.
 url: "https://codingthinks.com"
 baseurl: ""
 lang: en
@@ -12,7 +12,7 @@ google_analytics: G-9W8JLS10SH
 
 author:
   name: Kacper Harabasz
-  bio: Thoughts on code, tools, and the craft of building software.
+  bio: Ideas on building software and engineering organisations.
   github: "https://github.com/kharabasz"
   linkedin: "https://www.linkedin.com/in/kharabasz"
 
