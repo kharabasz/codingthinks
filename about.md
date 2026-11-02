@@ -2,11 +2,12 @@
 layout: page
 title: About Coding Thinks
 permalink: /about/
-description: A small corner of the internet for thinking about code.
 ---
 
-**Coding Thinks** is a notebook for curious developers: a place for practical tutorials, thoughtful opinions, useful tools, and lessons learned while building software.
+<figure class="author-photo"><img src="{{ '/assets/images/kacper-harabasz.webp' | relative_url }}" alt="Illustrated portrait of Kacper Harabasz in a white shirt, a jacket over his shoulder, in front of an orange striped sun." width="1254" height="1254"></figure>
 
-The goal is simple: explain things clearly, stay curious, and share ideas that are useful long after the tab is closed.
+**Coding Thinks** is the personal blog of Kacper Harabasz.
 
-Have a topic you would like to see covered? Add your preferred contact details or social links in `_config.yml` and update this page.
+I write here about building software and engineering organisations. I've built platforms, applications and development teams, and the ideas I share come from that experience.
+
+You can find me on [LinkedIn]({{ site.author.linkedin }}) and [GitHub]({{ site.author.github }}).
