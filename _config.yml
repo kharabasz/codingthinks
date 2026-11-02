@@ -10,6 +10,12 @@ permalink: /:categories/:title/
 timezone: Europe/Warsaw
 google_analytics: G-9W8JLS10SH
 
+giscus:
+  repo: kharabasz/codingthinks
+  repo_id: R_kgDOVYbWIQ
+  category: Announcements
+  category_id: DIC_kwDOVYbWIc4DKNYP
+
 author:
   name: Kacper Harabasz
   bio: Ideas on building software and engineering organisations.
