@@ -8,6 +8,7 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
 timezone: Europe/Warsaw
+google_analytics: G-9W8JLS10SH
 
 author:
   name: Kacper Harabasz
